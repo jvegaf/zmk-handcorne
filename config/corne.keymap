@@ -70,10 +70,10 @@
 
         raise_layer {
             bindings = <
-&kp F1  &kp F2           &kp F3    &kp F4        &kp F5                &kp F6                   &kp F7     &kp F8         &kp F9       &kp F10   &kp F11           &kp F12
-&trans  &kp EXCLAMATION  &kp AT    &kp HASH      &kp DOLLAR            &kp PERCENT              &kp UNDER  &kp MINUS      &kp EQUAL    &kp PLUS  &kp LEFT_BRACE    &kp RIGHT_BRACE
-&trans  &kp CARET        &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                                   &trans        &kp LCTRL             &kp LEFT_COMMAND         &trans     &trans         &trans
+&kp F1           &kp F2           &kp F3    &kp F4        &kp F5                &kp F6                   &kp F7     &kp F8         &kp F9       &kp F10   &kp F11           &kp F12
+&trans           &kp EXCLAMATION  &kp AT    &kp HASH      &kp DOLLAR            &kp PERCENT              &kp UNDER  &kp MINUS      &kp EQUAL    &kp PLUS  &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp PRINTSCREEN  &kp CARET        &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                                            &trans        &kp LCTRL             &kp LEFT_COMMAND         &trans     &trans         &trans
             >;
         };
     };
