@@ -7,6 +7,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&mt {
+    quick-tap-ms = <140>;
+    hold-while-undecided;
+};
+
+&lt { quick-tap-ms = <140>; };
+
 / {
     combos { compatible = "zmk,combos"; };
 
@@ -15,28 +22,28 @@
 
         default_layer {
             bindings = <
-&mt LEFT_WIN TAB  &kp Q  &kp W  &kp E               &kp R         &kp T                   &kp Y      &kp U            &kp I         &kp O    &kp P      &kp RIGHT_BRACKET
+&mt LEFT_WIN TAB  &kp Q  &kp W  &kp E               &kp R         &kp T                   &kp Y      &kp U            &kp I         &kp O    &kp P      &kp PIPE
 &mt LCTRL ESC     &kp A  &kp S  &kp D               &kp F         &kp G                   &kp H      &kp J            &kp K         &kp L    &kp SEMI   &kp SINGLE_QUOTE
-&kp LEFT_BRACKET  &kp Z  &kp X  &kp C               &kp V         &kp B                   &kp N      &kp M            &kp COMMA     &kp DOT  &kp SLASH  &kp SLASH
+&kp LEFT_BRACKET  &kp Z  &kp X  &kp C               &kp V         &kp B                   &kp N      &kp M            &kp COMMA     &kp DOT  &kp SLASH  &kp RIGHT_BRACKET
                                 &mt LEFT_ALT TILDE  &lt 1 DELETE  &mt LEFT_SHIFT SPACE    &kp ENTER  &lt 2 BACKSPACE  &kp LEFT_WIN
             >;
         };
 
         lower_layer {
             bindings = <
-&kp GRAVE  &kp N1            &kp N2        &kp N3          &kp N4          &kp N5             &kp N6     &kp N7          &kp N8        &kp N9                &kp N0                 &kp DOT
-&trans     &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_BRACE  &kp RIGHT_BRACE    &kp LEFT   &kp DOWN        &kp UP        &kp RIGHT             &kp COLON              &kp DOUBLE_QUOTES
-&kp TILDE  &kp EXCLAMATION   &kp AT        &kp HASH        &kp DOLLAR      &kp PERCENT        &kp CARET  &kp AMPS        &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH
-                                           &trans          &trans          &trans             &trans     &kp LEFT_SHIFT  &kp LEFT_ALT
+&kp GRAVE  &kp N1            &kp N2        &kp N3          &kp N4            &kp N5              &kp N6            &kp N7        &kp N8        &kp N9                &kp N0                 &kp PRINTSCREEN
+&trans     &kp LEFT_COMMAND  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LC(LEFT_GUI)  &kp LC(LEFT_ALT)    &kp LEFT          &kp DOWN      &kp UP        &kp RIGHT             &kp COLON              &kp DOUBLE_QUOTES
+&kp TILDE  &kp EXCLAMATION   &kp AT        &kp HASH        &kp DOLLAR        &kp PERCENT         &kp CARET         &kp AMPS      &kp ASTRK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSLH
+                                           &trans          &trans            &trans              &kp LS(LEFT_GUI)  &kp LEFT_GUI  &kp LEFT_ALT
             >;
         };
 
         raise_layer {
             bindings = <
-&kp F1           &kp F2           &kp F3    &kp F4        &kp F5                &kp F6                   &kp F7     &kp F8     &kp F9            &kp F10            &kp F11      &kp F12
-&trans           &kp EXCLAMATION  &kp AT    &kp HASH      &kp DOLLAR            &kp PERCENT              &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PAGE_UP  &kp PAGE_DOWN
-&kp PRINTSCREEN  &kp CARET        &kp AMPS  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp HOME     &kp END
-                                            &kp LCTRL     &kp LEFT_ALT          &kp LEFT_COMMAND         &trans     &trans     &trans
+&kp HOME  &kp EXCLAMATION  &kp AT  &kp HASH   &kp DOLLAR    &kp PERCENT         &kp CARET  &kp AMPS   &kp ASTERISK      &kp LPAR           &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp END   &kp F2           &kp F3  &kp F4     &kp F5        &kp F6              &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE               &kp LC(K_MUTE)
+&kp F7    &kp F8           &kp F9  &kp F10    &kp F11       &kp F12             &kp UNDER  &kp PLUS   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp C_VOLUME_DOWN      &kp C_VOL_UP
+                                   &kp LCTRL  &kp LEFT_ALT  &kp LEFT_COMMAND    &trans     &trans     &trans
             >;
         };
     };
